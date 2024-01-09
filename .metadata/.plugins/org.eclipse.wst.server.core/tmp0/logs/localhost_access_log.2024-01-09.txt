@@ -1,0 +1,5 @@
+127.0.0.1 - - [09/Jan/2024:08:00:15 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [09/Jan/2024:08:00:16 +0530] "GET /crudOperation/ HTTP/1.1" 404 769
+0:0:0:0:0:0:0:1 - - [09/Jan/2024:08:00:16 +0530] "GET /favicon.ico HTTP/1.1" 404 762
+0:0:0:0:0:0:0:1 - - [09/Jan/2024:08:00:26 +0530] "GET /crudOperation/employees HTTP/1.1" 404 778
+0:0:0:0:0:0:0:1 - - [09/Jan/2024:08:01:03 +0530] "GET /crudOperation/DisplayEmployees HTTP/1.1" 500 1428

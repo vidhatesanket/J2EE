@@ -1,0 +1,24 @@
+package com.demo.Dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.util.List;
+
+import com.demo.model.Employee;
+
+public class EmpDaoImpl implements EmpDao {
+
+	public static Connection getConnection;
+	static PreparedStatement getEmp;
+	
+	static {
+		getConnection=DBUtil.myConnection();
+		
+	}
+	@Override
+	public List<Employee> showAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

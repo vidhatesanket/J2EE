@@ -1,0 +1,15 @@
+package com.demo.Dao;
+
+import java.util.List;
+
+import com.demo.model.Employee;
+
+public class EmpDaoImpl implements EmpDao {
+
+	@Override
+	public List<Employee> showAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

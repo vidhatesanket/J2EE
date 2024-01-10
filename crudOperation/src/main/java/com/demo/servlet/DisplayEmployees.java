@@ -16,19 +16,43 @@ import com.demo.service.EmpService;
 import com.demo.service.EmpServiceImpl;
 
 /**
- * Servlet implementation class DisplayEmployees
+ * Servlet implementation class displayEmployees
  */
-@WebServlet("/DisplayEmployees")
-public class DisplayEmployees extends HttpServlet {
-	
+@WebServlet("/displayEmployees")
+public class displayEmployees extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
-		List<Employee> elist=new ArrayList<>();
-		EmpService eser=new EmpServiceImpl();
-		elist=eser.getall();
-		request.setAttribute("plist", elist);
-		RequestDispatcher rd=request.getRequestDispatcher("showEmp.jsp");
+		EmpService eserv=new EmpServiceImpl();
+		List<Employee> elist=eserv.getAll();
+		request.setAttribute("elist", elist);
+		RequestDispatcher rd=request.getRequestDispatcher("displayAllEmp.jsp");
 		rd.forward(request, response);
+		
+		
 	}
+	@Override
+		protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+			doGet(req,resp);
+		}
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,21 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Employee Details</title>
+</head>
+	<body>
+		<div>
+			<center>
+				<form action="#" method="post">
+					Employee id<input type="number" value=${emp.id } readonly/><br>
+					Employee name<input type="text" value=${emp.name } /><br>
+					Employee Sal <input type="number" value=${emp.sal } /><br>
+					<input type="button" value="Update Details" >
+				</form>
+			</center>
+		</div>
+	</body>
+</html>

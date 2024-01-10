@@ -1,0 +1,30 @@
+package com.demo.dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.util.List;
+
+import com.demo.model.Employee;
+
+public class EmpDaoImpl implements EmpDao{
+	private static PreparedStatement getemp;
+	private static Connection conn;
+	static {
+		
+		try {
+			conn=DBUtil.getMyConnection();
+			getemp=conn.prepareStatement("select * from employees");
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+		
+	
+
+	@Override
+	public List<Employee> showAllEmployees() {
+		
+	}
+
+}

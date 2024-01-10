@@ -1,4 +1,4 @@
-package com.demo.Dao;
+package com.demo.dao;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -6,19 +6,23 @@ import java.sql.SQLException;
 
 public class DBUtil {
 	public static Connection conn;
-	public static Connection myConnection() {
+	public static Connection getMyConnection() {
 		if(conn==null) {
 			try {
 				DriverManager.registerDriver(new com.mysql.cj.jdbc.Driver());
-				String url="jdbc:mysql://localhost:3306/temp?useSSL=false";
-				DriverManager.getConnection(url,"root", "Sanket@01");
+				String url="JDBC:mysql://localhost:3306/j2ee?useSSL=false";
+				conn=DriverManager.getConnection(url,"root","welcome");
+				return conn;
+				
 			} catch (SQLException e) {
+				
 				e.printStackTrace();
-			}			
+			}
 		}
-		return conn;
+		return null;
 	}
-	public static void closeConnnection() {
+	
+	public static void closeConnection() {
 		if(conn!=null) {
 			try {
 				conn.close();
@@ -27,4 +31,5 @@ public class DBUtil {
 			}
 		}
 	}
+	
 }

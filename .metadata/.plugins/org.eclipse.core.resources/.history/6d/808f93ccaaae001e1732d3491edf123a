@@ -1,0 +1,28 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jstl/core_rt" %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<table border='2'>
+	<tr>
+		<th>Employee ID</th>
+		<th>Employee Name</th>
+		<th>Employee Salary</th>
+		<th>Employee Edit/Delete</th>
+	</tr>
+	<c:forEach var="emp" items="${elist}">
+	<tr>
+	<td>${emp.id}</td>
+	<td>${emp.name}</td>
+	<td>${emp.sal}</td>
+	<td><a href="editemp/eid=${emp.id}">Edit</a>/<a href="deleteemp/eid=${emp.id}">Delete</a></td>
+	</tr>
+	</c:forEach>
+	</table>
+</body>
+</html>

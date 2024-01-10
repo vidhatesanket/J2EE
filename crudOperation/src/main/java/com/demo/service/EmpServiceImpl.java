@@ -2,15 +2,41 @@ package com.demo.service;
 
 import java.util.List;
 
-import com.demo.Dao.EmpDao;
+import com.demo.dao.EmpDao;
+import com.demo.dao.EmpDaoImpl;
 import com.demo.model.Employee;
 
 public class EmpServiceImpl implements EmpService{
+	private static EmpDao edao;
+	static {
+		edao=new EmpDaoImpl();
+	}
 
-	public static EmpDao edao;
 	@Override
-	public List<Employee> getall() {
-		return edao.showAll();
+	public List<Employee> getAll() {
+		return edao.showAllEmployees();
+	}
+
+	@Override
+	public Employee selectByid(int eid) {
+		return edao.selectByid(eid);
+	}
+
+	@Override
+	public void updateEmp(Employee e) {
+		edao.update(e);
+		
+	}
+
+	@Override
+	public void deleteEmp(int id) {
+		edao.deleteEmpById(id);
+	}
+
+	@Override
+	public void addNewEmployee(Employee emp) {
+		edao.addNew(emp);
+		
 	}
 
 }

@@ -6,6 +6,14 @@ import com.demo.model.Employee;
 
 public interface EmpService {
 
-	List<Employee> getall();
+	List<Employee> getAll();
+
+	Employee selectByid(int eid);
+
+	void updateEmp(Employee e);
+
+	void deleteEmp(int id);
+
+	void addNewEmployee(Employee emp);
 
 }

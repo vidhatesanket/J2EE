@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 
-public class Calculation extends HttpServlet {
+public class Calculation extends HttpServlet{
 	public  int fact(int num) {
 		if(num==1 || num==0) {
 			return 1;

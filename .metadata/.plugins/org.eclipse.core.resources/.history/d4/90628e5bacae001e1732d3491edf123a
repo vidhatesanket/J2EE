@@ -1,0 +1,80 @@
+package com.demo.dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.demo.model.Employee;
+
+public class EmpDaoImpl implements EmpDao{
+	
+	private static PreparedStatement getemp;
+	private static PreparedStatement selectByid;
+	private static Connection conn;
+	private static Employee emp;
+	static {
+		
+		try {
+			conn=DBUtil.getMyConnection();
+			getemp=conn.prepareStatement("select * from employees");
+			selectByid=conn.prepareStatement("select * from employees where id=?");
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+		
+	
+
+	@Override
+	public List<Employee> showAllEmployees() {
+		List<Employee> elist=new ArrayList<>();		
+		try {
+			ResultSet rs = getemp.executeQuery();
+			while(rs.next()) {
+				elist.add(new Employee(rs.getInt(1),rs.getString(2),rs.getDouble(3)));
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}		
+		return elist;
+	}
+
+
+
+	@Override
+	public Employee selectByid(int eid) {
+		try {
+			selectByid.setInt(1,eid);
+			ResultSet rs=selectByid.executeQuery();
+			if(rs.next()) {
+				
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

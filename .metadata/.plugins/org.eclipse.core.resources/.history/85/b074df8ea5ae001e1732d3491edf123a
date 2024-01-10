@@ -1,0 +1,19 @@
+package com.demo.dao;
+
+import java.sql.PreparedStatement;
+import java.util.List;
+
+import com.demo.model.Employee;
+
+public class EmpDaoImpl implements EmpDao{
+	private static PreparedStatement getemp;
+	static {
+		getemp=new PrepareStatement("select * from employees");
+	}
+
+	@Override
+	public List<Employee> showAllEmployees() {
+		
+	}
+
+}

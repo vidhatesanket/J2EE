@@ -1,0 +1,40 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jstl/core_rt" %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<style>
+		.table { border-collapse: collapse; width: 100%; }
+		.header, .cell { padding: 12px; text-align: left; border: 1px solid #ddd; }
+		.header { background-color: #f2f2f2; }
+		tr:nth-child(even) {background-color: #f2f2f2;} /* Alternate row color */
+		/* Button Styles */
+		.button { display: inline-block; padding: 14px 24px; font-size: 16px; color: white; text-decoration: none; border-radius: 4px; transition: background-color 0.3s ease; } /* Smooth transition for button background color */
+		.button:hover { background-color: #ddd; } /* Background color on hover */
+		.button.edit { background-color: #4CAF50; } /* Green background color for Edit button */
+		.button.delete { background-color: #F44336; } /* Red background color for Delete button */ /* Cell Styles */
+		.cell { width: 100%; }
+</style>
+<body>
+<table border='2'>
+	<tr>
+		<th>Employee ID</th>
+		<th>Employee Name</th>
+		<th>Employee Salary</th>
+		<th>Employee Edit/Delete</th>
+	</tr>
+	<c:forEach var="emp" items="${elist}">
+	<tr>
+	<td>${emp.id}</td>
+	<td>${emp.name}</td>
+	<td>${emp.sal}</td>
+	<td><a href="editEmp?eid=${emp.id}">Edit</a>/<a href="deleteEmp/eid=${emp.id}">Delete</a></td>
+	</tr>
+	</c:forEach>
+	</table>
+</body>
+</html>

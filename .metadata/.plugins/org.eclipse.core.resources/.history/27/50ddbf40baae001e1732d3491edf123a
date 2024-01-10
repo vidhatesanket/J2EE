@@ -1,0 +1,115 @@
+package com.demo.dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.demo.model.Employee;
+
+public class EmpDaoImpl implements EmpDao{
+	
+	private static PreparedStatement getemp;
+	private static PreparedStatement selectByid;
+	private static PreparedStatement updateEmp;
+	private static PreparedStatement deleteEmpById;
+	private static Connection conn;
+	private static Employee emp;
+	static {
+		
+		try {
+			conn=DBUtil.getMyConnection();
+			getemp=conn.prepareStatement("select * from employees");
+			selectByid=conn.prepareStatement("select * from employees where id=?");
+			updateEmp=conn.prepareStatement("update employees set name=?,sal=? where id=?");
+			deleteEmpById=conn.prepareStatement("delete from employees where id=?");
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+		
+	
+
+	@Override
+	public List<Employee> showAllEmployees() {
+		List<Employee> elist=new ArrayList<>();		
+		try {
+			ResultSet rs = getemp.executeQuery();
+			while(rs.next()) {
+				elist.add(new Employee(rs.getInt(1),rs.getString(2),rs.getDouble(3)));
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}		
+		return elist;
+	}
+
+
+
+	@Override
+	public Employee selectByid(int eid) {
+		try {
+			selectByid.setInt(1,eid);
+			ResultSet rs=selectByid.executeQuery();
+			if(rs.next()) {
+				return  new Employee(rs.getInt(1),rs.getString(2),rs.getDouble(3));
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
+
+
+
+	@Override
+	public void update(Employee e) {
+		
+		try {
+			updateEmp.setString(1,e.getName());
+			updateEmp.setDouble(2, e.getSal());
+			updateEmp.setInt(3, e.getId());
+			updateEmp.executeUpdate();
+		} catch (SQLException e1) {
+			e1.printStackTrace();
+		}
+		
+		
+	}
+
+
+
+	@Override
+	public void deleteEmpById(int id) {
+		try {
+			deleteEmpById.setInt(1, id);
+			deleteEmpById.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

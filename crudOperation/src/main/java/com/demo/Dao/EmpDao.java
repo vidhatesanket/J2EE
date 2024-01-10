@@ -1,4 +1,4 @@
-package com.demo.Dao;
+package com.demo.dao;
 
 import java.util.List;
 
@@ -6,6 +6,14 @@ import com.demo.model.Employee;
 
 public interface EmpDao {
 
-	List<Employee> showAll();
+	List<Employee> showAllEmployees();
+
+	Employee selectByid(int eid);
+
+	void update(Employee e);
+
+	void deleteEmpById(int id);
+
+	void addNew(Employee emp);
 
 }

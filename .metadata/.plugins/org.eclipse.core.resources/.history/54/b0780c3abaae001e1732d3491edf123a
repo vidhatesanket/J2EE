@@ -1,0 +1,17 @@
+package com.demo.dao;
+
+import java.util.List;
+
+import com.demo.model.Employee;
+
+public interface EmpDao {
+
+	List<Employee> showAllEmployees();
+
+	Employee selectByid(int eid);
+
+	void update(Employee e);
+
+	void deleteEmpById(int id);
+
+}

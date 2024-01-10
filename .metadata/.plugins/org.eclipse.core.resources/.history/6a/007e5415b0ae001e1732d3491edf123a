@@ -1,0 +1,60 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Employee Details</title>
+<style type="text/css">
+		body {
+			background-color: #f2f2f2;
+			font-family: Arial, sans-serif;
+		}
+		center {
+			max-width: 500px;
+			margin: 0 auto;
+		}
+		form {
+			padding: 20px;
+			border: 1px solid #ddd;
+		}
+		input[type="number"], input[type="text"] {
+			width: 300px;
+			padding: 10px;
+			margin-bottom: 10px;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Add a subtle box shadow */
+            transition: all 0.2s ease-in-out; /* Add a smooth transition effect */
+            outline: none; /* Remove the default outline */
+        }
+        input[type="number"]:focus, input[type="text"]:focus { /* Add a focus style */
+            box-shadow: 1px 1px 5px rgba(82, 176, 234, 0.5); /* Change the box shadow color */
+        }
+        input[type="button"] { /* Add a style for the update button */
+            background-color: #4CAF50; /* Change the background color */
+            color: white; /* Change the text color */
+            padding: 10px 20px; /* Adjust the padding */
+            border: none; /* Remove the border */
+            border-radius: 5px; /* Add rounded corners */
+            cursor: pointer; /* Add a pointer cursor on hover */
+            transition: all 0.2s ease-in-out; /* Add a smooth transition effect */
+        }
+        input[type="button"]:hover { /* Add a hover style for the update button */
+            background-color: #3e8e41; /* Change the background color on hover */
+        }
+    </style>
+</head>
+	<body>
+		<div>
+			<center>
+				<form action="#" method="post">
+					Employee id<input type="number" value=${emp.id } readonly/><br>
+					Employee name<input type="text" value=${emp.name } /><br>
+					Employee Sal <input type="number" value=${emp.sal } /><br>
+					<input type="button" value="Update Details" >
+				</form>
+			</center>
+		</div>
+	</body>
+</html>

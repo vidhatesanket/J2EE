@@ -13,9 +13,7 @@ import com.demo.model.Employee;
 import com.demo.service.EmpService;
 import com.demo.service.EmpServiceImpl;
 
-/**
- * Servlet implementation class editEmp
- */
+
 @WebServlet("/editEmp")
 public class editEmp extends HttpServlet {
 	private static final long serialVersionUID = 1L;

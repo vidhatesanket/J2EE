@@ -44,18 +44,33 @@
 	</section>
 	<section name="MavenProjectWizardArtifactPage">
 		<list key="groupId">
+			<item value="ManyToMany"/>
+			<item value="Bidirectional"/>
+			<item value="OneToOneBidirectional"/>
+			<item value="OneToOne"/>
+			<item value="EmbeddableProject"/>
 			<item value="FirstMavenHibernate"/>
 			<item value="FirstHibernate"/>
 			<item value="HibernateMaven"/>
 			<item value="HibernateProject"/>
 		</list>
 		<list key="name">
+			<item value="ManyToMany"/>
+			<item value="Bidirectional"/>
+			<item value="OneToOneBidirectional"/>
+			<item value="OneToOne"/>
+			<item value="EmbeddableProject"/>
 			<item value="FirstMavenHibernate"/>
 			<item value="FirstHibernate"/>
 			<item value="HibernateMaven"/>
 			<item value="HibernateProject"/>
 		</list>
 		<list key="artifactId">
+			<item value="ManyToMany"/>
+			<item value="Bidirectional"/>
+			<item value="OneToOneBidirectional"/>
+			<item value="OneToOne"/>
+			<item value="EmbeddableProject"/>
 			<item value="FirstMavenHibernate"/>
 			<item value="FirstHibernate"/>
 			<item value="HibernateMaven"/>

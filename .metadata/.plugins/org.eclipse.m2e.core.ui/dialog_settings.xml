@@ -44,6 +44,8 @@
 	</section>
 	<section name="MavenProjectWizardArtifactPage">
 		<list key="groupId">
+			<item value="InheritanceSingleTable"/>
+			<item value="OneToMany"/>
 			<item value="ManyToMany"/>
 			<item value="Bidirectional"/>
 			<item value="OneToOneBidirectional"/>
@@ -55,6 +57,8 @@
 			<item value="HibernateProject"/>
 		</list>
 		<list key="name">
+			<item value="InheritanceSingleTable"/>
+			<item value="OneToMany"/>
 			<item value="ManyToMany"/>
 			<item value="Bidirectional"/>
 			<item value="OneToOneBidirectional"/>
@@ -66,6 +70,8 @@
 			<item value="HibernateProject"/>
 		</list>
 		<list key="artifactId">
+			<item value="InheritanceSingleTable"/>
+			<item value="OneToMany"/>
 			<item value="ManyToMany"/>
 			<item value="Bidirectional"/>
 			<item value="OneToOneBidirectional"/>

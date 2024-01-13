@@ -2,6 +2,7 @@
 <section name="Workbench">
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="C:\Users\IET\Desktop\J2EE\TableWithJoinInherit"/>
 			<item value="C:\Users\IET\Desktop\J2EE\crudOperation"/>
 		</list>
 		<list key="projectNameTemplate">
@@ -44,6 +45,8 @@
 	</section>
 	<section name="MavenProjectWizardArtifactPage">
 		<list key="groupId">
+			<item value="TablePerClassInherit"/>
+			<item value="TableWithJoinInherit"/>
 			<item value="InheritanceSingleTable"/>
 			<item value="OneToMany"/>
 			<item value="ManyToMany"/>
@@ -57,6 +60,8 @@
 			<item value="HibernateProject"/>
 		</list>
 		<list key="name">
+			<item value="TablePerClassInherit"/>
+			<item value="TableWithJoinInherit"/>
 			<item value="InheritanceSingleTable"/>
 			<item value="OneToMany"/>
 			<item value="ManyToMany"/>
@@ -70,6 +75,8 @@
 			<item value="HibernateProject"/>
 		</list>
 		<list key="artifactId">
+			<item value="TablePerClassInherit"/>
+			<item value="TableWithJoinInherit"/>
 			<item value="InheritanceSingleTable"/>
 			<item value="OneToMany"/>
 			<item value="ManyToMany"/>

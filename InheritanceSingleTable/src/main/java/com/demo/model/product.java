@@ -1,7 +1,13 @@
 package com.demo.model;
 import java.util.Date;
 
+import javax.persistence.*;
+
+@Entity(name="prodinherit")
+@Inheritance(strategy=InheritanceType.SINGLE_TABLE)
+@DiscriminatorColumn(name="type",discriminatorType=DiscriminatorType.STRING)
 public class product {
+	@Id
 	private int pid;
 	private String pname;
 	private Date mfgdate;
@@ -16,10 +22,7 @@ public class product {
 		this.mfgdate = mfgdate;
 	}
 	
-	@Override
-	public String toString() {
-		return "product [pid=" + pid + ", pname=" + pname + ", mfgdate=" + mfgdate + "]";
-	}
+	
 	public int getPid() {
 		return pid;
 	}
@@ -37,6 +40,10 @@ public class product {
 	}
 	public void setMfgdate(Date mfgdate) {
 		this.mfgdate = mfgdate;
+	}
+	@Override
+	public String toString() {
+		return "product [pid=" + pid + ", pname=" + pname + ", mfgdate=" + mfgdate + "]";
 	}
 	
 }

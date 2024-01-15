@@ -2,6 +2,7 @@
 <section name="Workbench">
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="C:\Users\IET\Desktop\J2EE\WebApplication"/>
 			<item value="C:\Users\IET\Desktop\J2EE\TableWithJoinInherit"/>
 			<item value="C:\Users\IET\Desktop\J2EE\crudOperation"/>
 		</list>
@@ -45,6 +46,11 @@
 	</section>
 	<section name="MavenProjectWizardArtifactPage">
 		<list key="groupId">
+			<item value="DemoMavenWeb"/>
+			<item value="WebApplication"/>
+			<item value="AnnotationConfiguration"/>
+			<item value="BeanWiring"/>
+			<item value="FirstSpring"/>
 			<item value="TablePerClassInherit"/>
 			<item value="TableWithJoinInherit"/>
 			<item value="InheritanceSingleTable"/>
@@ -55,11 +61,12 @@
 			<item value="OneToOne"/>
 			<item value="EmbeddableProject"/>
 			<item value="FirstMavenHibernate"/>
-			<item value="FirstHibernate"/>
-			<item value="HibernateMaven"/>
-			<item value="HibernateProject"/>
 		</list>
 		<list key="name">
+			<item value="WebApplication"/>
+			<item value="AnnotationConfiguration"/>
+			<item value="BeanWiring"/>
+			<item value="FirstSpring"/>
 			<item value="TablePerClassInherit"/>
 			<item value="TableWithJoinInherit"/>
 			<item value="InheritanceSingleTable"/>
@@ -71,10 +78,13 @@
 			<item value="EmbeddableProject"/>
 			<item value="FirstMavenHibernate"/>
 			<item value="FirstHibernate"/>
-			<item value="HibernateMaven"/>
-			<item value="HibernateProject"/>
 		</list>
 		<list key="artifactId">
+			<item value="DemoMavenWeb"/>
+			<item value="WebApplication"/>
+			<item value="AnnotationConfiguration"/>
+			<item value="BeanWiring"/>
+			<item value="FirstSpring"/>
 			<item value="TablePerClassInherit"/>
 			<item value="TableWithJoinInherit"/>
 			<item value="InheritanceSingleTable"/>
@@ -85,9 +95,6 @@
 			<item value="OneToOne"/>
 			<item value="EmbeddableProject"/>
 			<item value="FirstMavenHibernate"/>
-			<item value="FirstHibernate"/>
-			<item value="HibernateMaven"/>
-			<item value="HibernateProject"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
